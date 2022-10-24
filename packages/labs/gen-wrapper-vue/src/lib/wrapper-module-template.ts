@@ -18,7 +18,7 @@ import {
 
 /**
  * Generates a Vue wrapper component as a Typescript module. This approach
- * requires generating a Javascript property types object for Vue runtime
+ * requires generating a JavaScript property types object for Vue runtime
  * type checking to work.
  *
  * TODO(sorvell): This is currently unused and instead the wrapper is generated
@@ -39,7 +39,7 @@ export const wrapperModuleTemplate = (
 `;
 };
 
-// TODO(sorvell): need to extract Javascript type from typescript for Vue.
+// TODO(sorvell): need to extract JavaScript type from typescript for Vue.
 // can workaround this by using an SFC and the macro `defineProperties<>()`
 const tsTypeToVuePropType = (type: string) => {
   const required = type.indexOf('undefined') === -1;
