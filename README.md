@@ -1,6 +1,7 @@
 <div align="center">
 <img src="./packages/lit/logo.svg" alt="Lit" width="300" height="141">
 
+
 ### Simple. Fast. Web Components.
 
 [![Build Status](https://github.com/lit/lit/actions/workflows/tests.yml/badge.svg)](https://github.com/lit/lit/actions/workflows/tests.yml)
