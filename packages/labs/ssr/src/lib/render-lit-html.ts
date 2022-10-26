@@ -189,7 +189,7 @@ type CustomElementClosedOp = {
 
 /**
  * Operation to possibly emit the `<!--lit-node-->` marker; the operation
- * always emits if there were attribtue parts, and may emit if the node
+ * always emits if there were attribute parts, and may emit if the node
  * was a custom element and it needed `defer-hydration` because it was
  * rendered in the shadow root of another custom element host; we don't
  * know the latter at opcode generation time, and so that test is done at
@@ -319,7 +319,7 @@ const getTemplateOpcodes = (result: TemplateResult) => {
   /**
    * Records the given string to the output, either by appending to the current
    * opcode (if already `text`) or by creating a new `text` opcode (if the
-   * previous opocde was not `text)
+   * previous opcode was not `text)
    */
   const flush = (value: string) => {
     const op = getLast(ops);
@@ -514,7 +514,7 @@ export type RenderInfo = {
   customElementHostStack: Array<ElementRenderer | undefined>;
 
   /**
-   * An optional callback to notifiy when a custom element has been rendered.
+   * An optional callback to notify when a custom element has been rendered.
    *
    * This allows servers to know what specific tags were rendered for a given
    * template, even in the case of conditional templates.
@@ -549,7 +549,7 @@ declare global {
  *
  * @param value Value to render
  * @param renderInfo Optional render context object that should be passed
- *   to any re-entrant calls to `render`, e.g. from a `renderShadow` callback
+ *   to any reentrant calls to `render`, e.g. from a `renderShadow` callback
  *   on an ElementRenderer.
  */
 export function* render(
